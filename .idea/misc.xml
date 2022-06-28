@@ -3,13 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/HP/Desktop/cse3120/CardiacRecorder/app/src/main/res/layout/activity_add_data.xml" value="0.19021739130434784" />
-        <entry key="..\:/Users/HP/Desktop/cse3120/CardiacRecorder/app/src/main/res/layout/activity_details.xml" value="0.22604166666666667" />
-        <entry key="..\:/Users/HP/Desktop/cse3120/CardiacRecorder/app/src/main/res/layout/activity_details2.xml" value="0.21197916666666666" />
-        <entry key="..\:/Users/HP/Desktop/cse3120/CardiacRecorder/app/src/main/res/layout/activity_edit.xml" value="0.22604166666666667" />
-        <entry key="..\:/Users/HP/Desktop/cse3120/CardiacRecorder/app/src/main/res/layout/activity_home.xml" value="0.22826086956521738" />
-        <entry key="..\:/Users/HP/Desktop/cse3120/CardiacRecorder/app/src/main/res/layout/blood_pressure_layout.xml" value="0.22826086956521738" />
-        <entry key="..\:/Users/HP/Desktop/cse3120/CardiacRecorder/app/src/main/res/layout/danger_bp.xml" value="0.264" />
+        <entry key="app/src/main/res/layout/activity_add_data.xml" value="0.2653985507246377" />
+        <entry key="app/src/main/res/layout/activity_details.xml" value="0.2653985507246377" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.15" />
       </map>
     </option>
   </component>
