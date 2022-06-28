@@ -105,17 +105,18 @@ public class HomeAdapter  extends  RecyclerView.Adapter {
     @Override
     public int getItemViewType(int position) {
         recycle recycle=mDataList.get(position);
-        int check= Integer.parseInt(recycle.getHeartRate());
+        int check1= Integer.parseInt(recycle.getSystolic());
+        int check2= Integer.parseInt(recycle.getDiastolic());
         //Toast.makeText(mContext,check,Toast.LENGTH_SHORT).show();
 
 
-        if(check>120 || check<80)
+        if((check1>=90 && check1<=140) && (check2>=60 && check2<=90))
         {
-            return danger_bp;
+            return normal_bp;
         }
         else
         {
-            return normal_bp;
+            return danger_bp;
         }
 
 
