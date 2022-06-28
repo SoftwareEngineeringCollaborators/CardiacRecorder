@@ -79,6 +79,8 @@ public class HomeAdapter  extends  RecyclerView.Adapter {
             ((dangerViewHolder) holder).date.setText(pTime);
 
 
+            viewHolder.systolic.setText(recycle.getSystolic());
+            viewHolder.diastolic.setText(recycle.getDiastolic());
         }
 
 
@@ -149,8 +151,8 @@ public class HomeAdapter  extends  RecyclerView.Adapter {
 
             heartbeat=itemView.findViewById(R.id.dangerbpShowId);
             date=itemView.findViewById(R.id.dateTv);
-            systolic=itemView.findViewById(R.id.systolicShowId);
-            diastolic=itemView.findViewById(R.id.diastolicShowId);
+            systolic=itemView.findViewById(R.id.dsystolicShowId);
+            diastolic=itemView.findViewById(R.id.ddiastolicShowId);
 
         }
 
