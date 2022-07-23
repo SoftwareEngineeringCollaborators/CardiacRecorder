@@ -1,18 +1,27 @@
 package com.example.cardiacrecorder;
 
 public class recycle {
-    private String date,heartRate,systolic,diastolic,comment,dataId;
+    private int id;
+    private String date,heartRate,systolic,diastolic,comment;
 
     public recycle() {
     }
 
-    public recycle(String date, String heartRate, String systolic, String diastolic, String comment, String dataId) {
+    public recycle(int id, String date, String heartRate, String systolic, String diastolic, String comment) {
+        this.id = id;
         this.date = date;
         this.heartRate = heartRate;
         this.systolic = systolic;
         this.diastolic = diastolic;
         this.comment = comment;
-        this.dataId = dataId;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getDate() {
@@ -53,13 +62,5 @@ public class recycle {
 
     public void setComment(String comment) {
         this.comment = comment;
-    }
-
-    public String getDataId() {
-        return dataId;
-    }
-
-    public void setDataId(String dataId) {
-        this.dataId = dataId;
     }
 }

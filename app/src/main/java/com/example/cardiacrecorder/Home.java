@@ -2,6 +2,8 @@ package com.example.cardiacrecorder;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -34,7 +36,10 @@ public class Home extends AppCompatActivity {
 
     private TextView textView;
     private EditText editText;
+
     private ProgressDialog loader;
+
+    dbmanager mgr;
 
     private HomeAdapter homeAdapter;
     private List<recycle> recycleList;
@@ -50,13 +55,11 @@ public class Home extends AppCompatActivity {
 
         recyclerView.setHasFixedSize(true);
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(this);
-        //linearLayoutManager.setReverseLayout(true);
-        //linearLayoutManager.setStackFromEnd(true);
-
         recyclerView.setLayoutManager(linearLayoutManager);
 
 
-        readComments();
+        //readComments();
+        readComments2();
 
         FloatingActionButton fab = findViewById(R.id.addDataId);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -80,7 +83,7 @@ public class Home extends AppCompatActivity {
                     recycle recycle=dataSnapshot.getValue(recycle.class);
                     recycleList.add(recycle);
                 }
-                homeAdapter=new HomeAdapter(Home.this,recycleList);
+                homeAdapter=new HomeAdapter(Home.this, recycleList);
 
 
                 recyclerView.setAdapter(homeAdapter);
@@ -93,6 +96,21 @@ public class Home extends AppCompatActivity {
 
             }
         });
+
+    }
+
+    private void readComments2() {
+       Cursor cursor=new dbmanager(this).readData();
+
+       while ( cursor.moveToNext() )
+       {
+           recycle recycle=new recycle(cursor.getInt(0),cursor.getString(1),cursor.getString(2),cursor.getString(3),cursor.getString(4),cursor.getString(5));
+           recycleList.add(recycle);
+
+       }
+
+        homeAdapter=new HomeAdapter(Home.this,recycleList);
+        recyclerView.setAdapter(homeAdapter);
 
     }
 
