@@ -37,7 +37,8 @@ public class addDataActivity extends AppCompatActivity {
              @Override
              public void onClick(View v) {
                  Toast.makeText(addDataActivity.this,"clicked",Toast.LENGTH_SHORT).show();
-                 addData();
+                 addData2();
+                 //addData();
              }
          });
 
@@ -88,4 +89,20 @@ public class addDataActivity extends AppCompatActivity {
 
         //loader.dismiss();
     }
+
+    public void addData2()
+    {
+
+
+        String date = ""+System.currentTimeMillis();
+
+        long res=new dbmanager(this).addData(heartrate.getText().toString(),systolic.getText().toString(),diastolic.getText().toString(),comment.getText().toString(),date);
+        Toast.makeText(addDataActivity.this, "Data Added Successfully", Toast.LENGTH_SHORT).show();
+
+        startActivity(new Intent(addDataActivity.this,Home.class));
+
+
+    }
+
+
 }
