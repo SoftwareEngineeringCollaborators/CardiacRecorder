@@ -47,6 +47,10 @@ public class EditandDeleteTest {
     @Rule
     public ActivityScenarioRule<Home> activity_rule = new ActivityScenarioRule<>(Home.class);
 
+    /**
+     * Edit Data UI Test
+     */
+
     @Test
     public void deditdata_test(){
         onView(withId(R.id.recyclerListId)).check(matches(isDisplayed()));
@@ -73,6 +77,10 @@ public class EditandDeleteTest {
         onView(withId(R.id.addButtonId)).perform(click());
         onView(withId(R.id.recyclerListId)).check(matches(isDisplayed()));
     }
+
+    /**
+     * Delete Data UI Test
+     */
 
     @Test
     public void eDelete(){

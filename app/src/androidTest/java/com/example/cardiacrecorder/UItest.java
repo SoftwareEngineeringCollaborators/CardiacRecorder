@@ -46,6 +46,10 @@ public class UItest {
     @Rule
     public ActivityScenarioRule<MainActivity> activity_rule = new ActivityScenarioRule<>(MainActivity.class);
 
+    /**
+     * Splash Screen UI Test
+     */
+
     @Test
     public void asplash_test(){
         onView(withId(R.id.splashScreen)).check(matches(isDisplayed()));
@@ -53,6 +57,10 @@ public class UItest {
         onView(withId(R.id.splashScreenImg)).check(matches(isDisplayed()));
         onView(withText("Created by Nafiul and Iftee")).check(matches(isDisplayed()));
     }
+
+    /**
+     * Recycle View UI Test
+     */
 
     @Test
     public void blistTest(){
@@ -64,6 +72,10 @@ public class UItest {
                 .perform(RecyclerViewActions.actionOnItemAtPosition(0, click()));
         onView(withId(R.id.detailedview)).check(matches(isDisplayed()));
     }
+
+    /**
+     * Add data UI Test
+     */
 
     @Test
     public void cadddata_test(){
