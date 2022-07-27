@@ -55,7 +55,7 @@ public class UItest {
         onView(withId(R.id.splashScreen)).check(matches(isDisplayed()));
         onView(withText("Cardiac Recorder")).check(matches(isDisplayed()));
         onView(withId(R.id.splashScreenImg)).check(matches(isDisplayed()));
-        onView(withText("Created by Nafiul and Iftee")).check(matches(isDisplayed()));
+        onView(withText("Created by \n Iftee (1807002) and Nafiul (1807005)")).check(matches(isDisplayed()));
     }
 
     /**
