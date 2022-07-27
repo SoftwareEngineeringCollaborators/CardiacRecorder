@@ -33,64 +33,26 @@ public class addDataActivity extends AppCompatActivity {
         addButton=findViewById(R.id.addButtonId);
 
 
+        /**
+         * data addition button
+         */
          addButton.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
                  Toast.makeText(addDataActivity.this,"clicked",Toast.LENGTH_SHORT).show();
-                 addData2();
-                 //addData();
+
+                 addData();
              }
          });
 
 
     }
 
+
+    /**
+     * data addition on sqlite
+     */
     public void addData()
-    {
-        /*
-        loader.setMessage("Adding a new data");
-        loader.setCanceledOnTouchOutside(false);
-        loader.show();
-         */
-
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("dataInfo");
-        String dataId = reference.push().getKey();
-
-
-        String date = ""+System.currentTimeMillis();
-        HashMap<String, Object> hashMap = new HashMap<>();
-
-        hashMap.put("dataId", dataId);
-        hashMap.put("date", date);
-        hashMap.put("heartRate", heartrate.getText().toString());
-        hashMap.put("systolic", systolic.getText().toString());
-        hashMap.put("diastolic", diastolic.getText().toString());
-        hashMap.put("comment", comment.getText().toString());
-
-
-
-        reference.child(dataId).setValue(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task) {
-                if (task.isSuccessful()) {
-                    Toast.makeText(addDataActivity.this, "Data Added Successfully", Toast.LENGTH_SHORT).show();
-
-                    startActivity(new Intent(addDataActivity.this,Home.class));
-
-                }
-                else {
-                    Toast.makeText(addDataActivity.this, "Error Adding Data", Toast.LENGTH_SHORT).show();
-
-                }
-
-            }
-        });
-
-
-        //loader.dismiss();
-    }
-
-    public void addData2()
     {
 
 

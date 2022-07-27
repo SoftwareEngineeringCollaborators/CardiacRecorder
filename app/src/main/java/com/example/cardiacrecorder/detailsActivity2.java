@@ -47,19 +47,15 @@ public class detailsActivity2 extends AppCompatActivity {
         String timestamp=bundle.getString("date");
         Calendar calendar=Calendar.getInstance(Locale.getDefault());
         calendar.setTimeInMillis(Long.parseLong(timestamp));
-        //String pTime= android.text.format.DateFormat.format("dd/MM/yyyy hh:mm aa", calendar).toString();
         String pDate= android.text.format.DateFormat.format("dd/MM/yyyy", calendar).toString();
         String pTime= android.text.format.DateFormat.format("hh:mm aa", calendar).toString();
         date.setText(pDate);
         time.setText(pTime);
 
-        /*editButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(detailsActivity2.this,Home.class));
-            }
-        });*/
 
+        /**
+         * editbutton added
+         */
         editButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

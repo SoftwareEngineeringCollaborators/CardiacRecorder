@@ -39,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
         logo.setAnimation(bottomAnim);
         slogan.setAnimation(bottomAnim);
 
+        /**
+         * splash screen dynamic
+         */
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {

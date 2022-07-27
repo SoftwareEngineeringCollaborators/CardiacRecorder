@@ -31,15 +31,9 @@ import java.util.List;
 
 public class Home extends AppCompatActivity {
 
-    private Toolbar toolbar;
+
     private RecyclerView recyclerView;
 
-    private TextView textView;
-    private EditText editText;
-
-    private ProgressDialog loader;
-
-    dbmanager mgr;
 
     private HomeAdapter homeAdapter;
     private List<recycle> recycleList;
@@ -49,18 +43,22 @@ public class Home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        //RecyclerView extends its size by the length of database
         recycleList=new ArrayList<>();
         recyclerView = findViewById(R.id.recyclerListId);
 
 
+        //linear layout manager fit it to this class
         recyclerView.setHasFixedSize(true);
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
 
 
-        //readComments();
-        readComments2();
+        //retrive information from sqlite database
+        readComments();
 
+
+        //floating action button to add new data
         FloatingActionButton fab = findViewById(R.id.addDataId);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,34 +70,14 @@ public class Home extends AppCompatActivity {
 
     }
 
+
+    /**
+     * fetch data from database
+     * added in list
+     * put on adapter
+     */
+
     private void readComments() {
-        DatabaseReference reference=FirebaseDatabase.getInstance().getReference("dataInfo");
-
-        reference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                recycleList.clear();
-                for(DataSnapshot dataSnapshot: snapshot.getChildren()){
-                    recycle recycle=dataSnapshot.getValue(recycle.class);
-                    recycleList.add(recycle);
-                }
-                homeAdapter=new HomeAdapter(Home.this, recycleList);
-
-
-                recyclerView.setAdapter(homeAdapter);
-                //HomeAdapter.notifyDataSetChanged();
-                //recyclerView.smoothScrollToPosition(recyclerView.getAdapter().getItemCount());
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
-
-    }
-
-    private void readComments2() {
        Cursor cursor=new dbmanager(this).readData();
 
        while ( cursor.moveToNext() )
@@ -109,45 +87,15 @@ public class Home extends AppCompatActivity {
 
        }
 
+        /**
+         * set in adapter
+         */
+
         homeAdapter=new HomeAdapter(Home.this,recycleList);
         recyclerView.setAdapter(homeAdapter);
 
     }
 
-    private void addInfo() {
-        /*
-        loader.setMessage("Adding a new data");
-        loader.setCanceledOnTouchOutside(false);
-        loader.show();
-         */
 
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("dataInfo");
-        String dataId = reference.push().getKey();
-
-        String date = ""+System.currentTimeMillis();
-        HashMap<String, Object> hashMap = new HashMap<>();
-        hashMap.put("data", editText.getText().toString());
-        hashMap.put("dataId", dataId);
-
-
-        reference.child(dataId).setValue(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task) {
-                if (task.isSuccessful()) {
-                    Toast.makeText(Home.this, "Data Added Successfully", Toast.LENGTH_SHORT).show();
-
-                }
-                else {
-                    Toast.makeText(Home.this, "Error Adding Data", Toast.LENGTH_SHORT).show();
-
-                }
-
-            }
-        });
-
-        //loader.dismiss();
-
-
-    }
 }
 

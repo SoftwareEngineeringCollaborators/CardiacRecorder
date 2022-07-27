@@ -40,6 +40,9 @@ public class EditActivity extends AppCompatActivity {
         comment.setText(bundle.getString("comment"));
 
 
+        /**
+         * update button
+         */
 
         updateButton.setOnClickListener(new View.OnClickListener() {
             @Override

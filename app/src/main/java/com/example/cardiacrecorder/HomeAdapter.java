@@ -107,6 +107,9 @@ public class HomeAdapter  extends  RecyclerView.Adapter {
             }
         });
 
+        /**
+         * the work of delete
+         */
         holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
