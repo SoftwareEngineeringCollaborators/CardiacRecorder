@@ -10,10 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity
+            android:name=".detailsActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".EditActivity"
+            android:exported="false" />
+        <activity
             android:name=".addDataActivity"
             android:exported="false" />
         <activity
             android:name=".detailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Home"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
