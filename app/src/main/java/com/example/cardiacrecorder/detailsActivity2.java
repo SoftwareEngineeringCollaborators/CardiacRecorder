@@ -53,7 +53,9 @@ public class detailsActivity2 extends AppCompatActivity {
         time.setText(pTime);
 
 
-
+        /**
+         * editbutton added
+         */
         editButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

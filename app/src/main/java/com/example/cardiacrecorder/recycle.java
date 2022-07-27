@@ -7,6 +7,15 @@ public class recycle {
     public recycle() {
     }
 
+    /**
+     * all data of class
+     * @param id
+     * @param date
+     * @param heartRate
+     * @param systolic
+     * @param diastolic
+     * @param comment
+     */
     public recycle(int id, String date, String heartRate, String systolic, String diastolic, String comment) {
         this.id = id;
         this.date = date;

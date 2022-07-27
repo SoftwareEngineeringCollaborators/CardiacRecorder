@@ -9,6 +9,9 @@ import org.robolectric.RuntimeEnvironment;
 
 
 @RunWith(RobolectricTestRunner.class)
+/**
+ * data added unit test
+ */
 public class addDataTestUnitTest {
     @Test
     public void addDataTest()

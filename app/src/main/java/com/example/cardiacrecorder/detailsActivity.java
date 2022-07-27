@@ -40,6 +40,9 @@ public class detailsActivity extends AppCompatActivity {
         time=findViewById(R.id.timeId);
 
 
+        /**
+         * database addition
+         */
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot snapshot) {

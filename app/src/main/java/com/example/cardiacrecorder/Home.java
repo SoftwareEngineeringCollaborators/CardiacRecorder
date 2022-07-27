@@ -71,6 +71,11 @@ public class Home extends AppCompatActivity {
     }
 
 
+    /**
+     * fetch data from database
+     * added in list
+     * put on adapter
+     */
 
     private void readComments() {
        Cursor cursor=new dbmanager(this).readData();
@@ -81,6 +86,10 @@ public class Home extends AppCompatActivity {
            recycleList.add(recycle);
 
        }
+
+        /**
+         * set in adapter
+         */
 
         homeAdapter=new HomeAdapter(Home.this,recycleList);
         recyclerView.setAdapter(homeAdapter);

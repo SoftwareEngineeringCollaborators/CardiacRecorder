@@ -36,6 +36,15 @@ public class dbmanager extends SQLiteOpenHelper {
     }
 
 
+    /**
+     * all the information added to the table
+     * @param heartRate
+     * @param systolic
+     * @param diastolic
+     * @param comment
+     * @param date
+     * @return
+     */
     public  long  addData( String heartRate, String systolic, String diastolic , String comment, String date)
     {
         SQLiteDatabase db=this.getWritableDatabase();
@@ -52,6 +61,17 @@ public class dbmanager extends SQLiteOpenHelper {
         return res;
     }
 
+    /**
+     * all the information updated to the table
+     * @param id
+     * @param heartRate
+     * @param systolic
+     * @param diastolic
+     * @param comment
+     * @param date
+     * @return
+     */
+
     public  long updateData(int id, String heartRate, String systolic, String diastolic , String comment, String date)
     {
         SQLiteDatabase db=this.getWritableDatabase();
@@ -66,6 +86,11 @@ public class dbmanager extends SQLiteOpenHelper {
         long res=db.update("tbl_bp",cv,"dataid="+id,null);
         return  res;
     }
+
+    /**
+     * all the information fetched from the table
+     * @return
+     */
 
     public Cursor readData()
     {

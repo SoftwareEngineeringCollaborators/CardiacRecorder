@@ -33,6 +33,9 @@ public class addDataActivity extends AppCompatActivity {
         addButton=findViewById(R.id.addButtonId);
 
 
+        /**
+         * data addition button
+         */
          addButton.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
@@ -46,7 +49,9 @@ public class addDataActivity extends AppCompatActivity {
     }
 
 
-
+    /**
+     * data addition on sqlite
+     */
     public void addData()
     {
 

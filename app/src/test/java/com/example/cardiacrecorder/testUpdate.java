@@ -5,6 +5,10 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 import org.robolectric.RuntimeEnvironment;
 
+/**\
+ *
+ * data update test
+ */
 public class testUpdate {
     @Test
     public void testUpdate()
