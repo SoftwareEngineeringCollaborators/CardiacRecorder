@@ -20,7 +20,7 @@ public class ListUItest {
     public ActivityScenarioRule<Home> activity_rule = new ActivityScenarioRule<>(Home.class);
 
     @Test
-    public void splash_test(){
+    public void List_test(){
         onView(withId(R.id.homelist)).check(matches(isDisplayed()));
         onView(withId(R.id.recyclerListId)).check(matches(isDisplayed()));
         onView(withId(R.id.bottom)).check(matches(isDisplayed()));
