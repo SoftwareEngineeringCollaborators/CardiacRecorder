@@ -7,11 +7,11 @@ import org.junit.runner.RunWith;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 
-
-@RunWith(RobolectricTestRunner.class)
 /**
  * data added unit test
  */
+@RunWith(RobolectricTestRunner.class)
+
 public class addDataTestUnitTest {
     @Test
     public void addDataTest()

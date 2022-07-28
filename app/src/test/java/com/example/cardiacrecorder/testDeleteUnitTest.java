@@ -6,12 +6,12 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
-
-@RunWith(RobolectricTestRunner.class)
-
 /**
  * data deletion test
  */
+@RunWith(RobolectricTestRunner.class)
+
+
 public class testDeleteUnitTest {
     @Test
     public void testDelete()

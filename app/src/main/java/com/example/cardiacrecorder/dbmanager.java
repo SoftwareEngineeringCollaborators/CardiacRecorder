@@ -8,6 +8,10 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
+/**
+ * Sql lite Database Management System
+ */
+
 public class dbmanager extends SQLiteOpenHelper {
     private static final String dbname="dbbp";
     public dbmanager(@Nullable Context context) {

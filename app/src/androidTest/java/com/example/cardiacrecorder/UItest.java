@@ -36,7 +36,9 @@ import org.junit.runner.RunWith;
 import org.junit.runners.MethodSorters;
 
 import java.util.Map;
-
+/**
+ * UI test for Splash Screen, RecycleView and Adding new data
+ */
 @RunWith(AndroidJUnit4.class)
 @LargeTest
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)

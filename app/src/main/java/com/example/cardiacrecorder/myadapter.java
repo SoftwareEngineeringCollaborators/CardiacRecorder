@@ -16,6 +16,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+/**
+ * Database Management Helper
+ */
 public class myadapter extends RecyclerView.Adapter<myadapter.myviewholder> {
 
     Context context;

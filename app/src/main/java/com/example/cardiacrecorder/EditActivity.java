@@ -14,6 +14,9 @@ import android.widget.Toast;
 import java.util.Calendar;
 import java.util.Locale;
 
+/**
+ *  Edit existing data from RecycleView and Database
+ */
 public class EditActivity extends AppCompatActivity {
 
     EditText heartrate,systolic,diastolic,comment;

@@ -19,6 +19,9 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
 
+/**
+ * View Adapter for RecycleView
+ */
 
 public class HomeAdapter  extends  RecyclerView.Adapter {
 

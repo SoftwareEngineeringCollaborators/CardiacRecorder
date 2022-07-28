@@ -17,6 +17,10 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
 
+/**
+ * Adding New Data in the RecycleView and DataBase
+ */
+
 public class addDataActivity extends AppCompatActivity {
 
     TextView heartrate,systolic,diastolic,comment;

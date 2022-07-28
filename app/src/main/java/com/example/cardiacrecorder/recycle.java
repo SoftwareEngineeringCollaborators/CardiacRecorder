@@ -1,5 +1,8 @@
 package com.example.cardiacrecorder;
 
+/**
+ * Getting Data from Sql lite
+ */
 public class recycle {
     private int id;
     private String date,heartRate,systolic,diastolic,comment;

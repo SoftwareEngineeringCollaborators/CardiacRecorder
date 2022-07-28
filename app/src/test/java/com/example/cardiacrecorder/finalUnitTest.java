@@ -6,12 +6,12 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
-
+/**
+ * data update test
+ */
 @RunWith(RobolectricTestRunner.class)
+
 public class finalUnitTest {
-    /**\
-     * data update test
-     */
     @Test
     public void testUpdate()
     {

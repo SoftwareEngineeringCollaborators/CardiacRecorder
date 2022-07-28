@@ -29,6 +29,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+/**
+ * RecycleView Showing all the data from sql lite Database
+ */
 public class Home extends AppCompatActivity {
 
 

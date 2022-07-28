@@ -10,6 +10,9 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+/**
+ * Showing Splash Screen
+ */
 public class MainActivity extends AppCompatActivity {
 
     private static int SPLASH_SCRN=4000;

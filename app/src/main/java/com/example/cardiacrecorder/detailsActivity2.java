@@ -18,6 +18,9 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.Calendar;
 import java.util.Locale;
 
+/**
+ * Detailed View for each data in recycleview
+ */
 public class detailsActivity2 extends AppCompatActivity {
 
     TextView heartrate,systolic,diastolic,comment,date,time;
