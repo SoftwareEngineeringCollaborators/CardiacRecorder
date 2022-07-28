@@ -2,6 +2,7 @@ package com.example.cardiacrecorder;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -59,8 +60,54 @@ public class addDataActivity extends AppCompatActivity {
     public void addData()
     {
 
+        String hr,s,d,c;
 
+        hr=heartrate.getText().toString();
+        if(TextUtils.isEmpty(hr))
+        {
+            systolic.setError("Required");
+            return;
+        }
+        int x=Integer.parseInt(hr);
+        if(x<40 || x>180)
+        {
+            systolic.setError("Invalid Data!");
+            return;
+        }
+
+
+        s=systolic.getText().toString();
+
+        if(TextUtils.isEmpty(hr))
+        {
+            systolic.setError("Required");
+            return;
+        }
+        x=Integer.parseInt(hr);
+        if(x<60 || x>200)
+        {
+            systolic.setError("Invalid Data!");
+            return;
+        }
+
+        d=diastolic.getText().toString();
+
+        if(TextUtils.isEmpty(hr))
+        {
+            systolic.setError("Required");
+            return;
+        }
+        x=Integer.parseInt(hr);
+        if(x<20 || x>150)
+        {
+            systolic.setError("Invalid Data!");
+            return;
+        }
+
+        c=comment.getText().toString();
         String date = ""+System.currentTimeMillis();
+
+
 
         long res=new dbmanager(this).addData(heartrate.getText().toString(),systolic.getText().toString(),diastolic.getText().toString(),comment.getText().toString(),date);
         Toast.makeText(addDataActivity.this, "Data Added Successfully", Toast.LENGTH_SHORT).show();
