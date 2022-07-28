@@ -42,6 +42,21 @@ This app can save all the record of cardiac status.
 - Add comments according to your health condition.
 - Everything will be shown in a combined frame.
 
+## App Screenshot
+
+<table>
+  <tr>
+    <td><img src="https://user-images.githubusercontent.com/37780502/181494814-7503c6d9-40be-4457-800d-e4f8eb62da28.PNG"></td>
+    <td><img src="https://user-images.githubusercontent.com/37780502/181494858-9ea8c057-3c4d-4688-9c3d-4ebe1b12086e.PNG"></td>
+    <td><img src="https://user-images.githubusercontent.com/37780502/181495571-a6feed77-262c-4c49-bacb-bd15f5f62310.PNG"></td>
+   </tr>
+   <tr>
+    <td><img src="https://user-images.githubusercontent.com/37780502/181495584-09ca3806-aa50-4d13-bb04-b94a6e0da511.PNG"></td>
+    <td><img src="https://user-images.githubusercontent.com/37780502/181495595-3e9a24f4-13c0-4b42-9778-91d07af7b997.PNG"></td>
+    <td><img src="https://user-images.githubusercontent.com/37780502/181495604-06b57be1-cda0-4546-86dc-3af29efa4b2a.PNG"></td>
+   </tr>
+</table>
+
 ## Contributing
 
 Contributions are always welcome!
