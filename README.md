@@ -5,10 +5,16 @@ An app which can track all cardiac status such as blood pressure and pulse rate
 
 
 ## Authors
-
-- [@MD_AKIL_RAIHAN_IFTEE](https://www.github.com/IFTEE-KUET-CSE)
-- [@NAFIUL_ALAM](https://www.github.com/Exoalam)
-
+<table>
+  <tr>
+    <td><img src="https://user-images.githubusercontent.com/37780502/180733665-954afa59-d17c-4be8-a793-578bbb147d51.jpg" alt="3" width = 300px height = 300px></td>
+    <td><img src="https://user-images.githubusercontent.com/37780502/180733786-d1d2a301-5830-4680-be65-18e5829b98c4.jpg" alt="2" width = 300px height = 300px></td>
+   </tr> 
+   <tr>
+      <td><h3 align='center'>Nafiul Alam</h3><h3 align='center'>Roll: 1807005</h3><b>Github: </b><a href="https://github.com/Exoalam">https://github.com/Exoalam</a></td>
+      <td><h3 align='center'>Md. Akil Raihan Iftee</h3><h3 align='center'>Roll: 1807002</h3><b>Github: </b><a href="https://github.com/IFTEE-KUET-CSE">https://github.com/IFTEE-KUET-CSE</a></td>
+  </tr>
+</table>
 
 ## Badges
 
