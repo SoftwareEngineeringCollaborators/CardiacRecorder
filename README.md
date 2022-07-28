@@ -7,7 +7,7 @@ An app which can track all cardiac status such as blood pressure and pulse rate
 ## Authors
 
 - [@MD_AKIL_RAIHAN_IFTEE](https://www.github.com/IFTEE-KUET-CSE)
-- [@MD_NAFIUL_ALAM](https://www.github.com/Exoalam)
+- [@NAFIUL_ALAM](https://www.github.com/Exoalam)
 
 
 ## Badges
