@@ -48,7 +48,7 @@ Please adhere to this project's `code of conduct`.
 ## Documentation
 There is an app Documentation.You can check it here
 
-[Documentation](https://linktodocumentation)
+[Documentation](https://exoalam.github.io/com/example/cardiacrecorder/package-summary.html)
 
 
 ## License
